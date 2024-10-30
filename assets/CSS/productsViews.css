@@ -1,0 +1,19 @@
+#products-container {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual ancho */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 10px;
+}
+/* CSS para el section */
+.products-views {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    padding: 20px; 
+}
+.products-filter{
+    min-width: 256px;
+    width: 250px;
+    height: 100%; 
+}
