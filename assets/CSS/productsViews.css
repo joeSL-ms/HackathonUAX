@@ -1,5 +1,5 @@
 #products-container {
-
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual ancho */
     gap: 20px; /* Espacio entre elementos */
@@ -8,12 +8,46 @@
 /* CSS para el section */
 .products-views {
     display: flex;
-    justify-content: center;
     margin-top: 90px;
     padding: 20px; 
+    justify-content: flex-start;
 }
 .products-filter{
-    min-width: 256px;
-    width: 250px;
+    min-width: 128px;
     height: 100%; 
 }
+.filter-colum{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    padding: 10px;
+    width: 128px;
+}
+.filter-colum {
+    input[type="checkbox"] {
+        visibility: hidden;
+    }
+}
+.filter-titulo {
+    position: relative;
+    width: 100%; 
+    padding: 10px 0;
+    text-align: center; /* Centra el texto */
+}
+
+.filter-titulo h2 {
+    margin: 0; /* Elimina márgenes del h2 */
+}
+
+.filter-titulo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Espacio entre el texto y la línea */
+    width: 100%; /* Ocupa todo el ancho del div */
+    height: 2px; /* Grosor de la línea */
+    background: grey; /* Color de la línea */
+}
+/*.filter-label {
+
+}*/
