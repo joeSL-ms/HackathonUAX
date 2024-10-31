@@ -1,0 +1,80 @@
+@media screen and (max-width : 920px){
+    .filter-Main{
+        display: none;
+    }
+}
+@media screen and (max-width: 842px) {
+    .navMobile {
+        position: fixed; 
+        top: 0;
+        left: 0; 
+        right: 0; 
+        background-color: #ffffff; 
+        z-index: 1000;  
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navMobile-content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: stretch; 
+        input[type="checkbox"] {
+            visibility: hidden;
+        }
+    }
+    .search-wrapper {
+        margin-top: 15px;
+        border-radius: 20px;
+        background-color: var(--search-area-bg);
+        padding-right: 12px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 280px;
+        color: var(--light-font);
+        box-shadow: 0 2px 6px 0 rgba(136,148,171,.2),0 24px 20px -24px rgba(71,82,107,.1);
+        overflow: hidden;
+        border: solid #b27fff 1px;
+
+        .dark & { box-shadow: none; }
+    }
+
+    .search-input {
+        border: none;
+        flex: 1;
+        outline: none;
+        height: 100%;
+        padding: 0 20px;
+        font-size: 16px;
+        background-color: var(--search-area-bg);
+        color: var(--main-color);
+
+        &:placeholder {
+            color: var(--main-color);
+            opacity: .6;
+        }
+    }
+    #products-container {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 4 columnas de igual ancho */
+        gap: 20px; /* Espacio entre elementos */
+        padding: 10px;
+    }
+    /*Aqui es el apartado del boton y puedes cambiar el color*/
+    .nav-donation {
+        flex: 1; 
+        max-width: 100px; 
+        background-color: #fea357; 
+        border-radius: 99px; 
+        height: 40px; 
+    }
+}

@@ -1,30 +1,33 @@
 .product {
     display: flex;
     align-items: center;
-    font-size: .8rem;
+    font-size: 1rem; /* Aumenta el tamaño de la fuente general */
     justify-content: center;
     width: 100%;
 }
+
 .product-presentation {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px; /* Aumenta el espacio entre elementos */
 }
+
 .product-img {
-    min-width: 192px;
-    height: 237px;
+    min-width: 96px; /* Mantiene las dimensiones predefinidas */
+    height: 237px;    /* Mantiene las dimensiones predefinidas */
 }
+
 .product-content {
     display: flex;
     align-items: center; 
     width: 100%;
-
 }
+/*Aqui se cambia el color del boton del producto(Solicitar)*/
 .product-button {
-    font-size: 1em;
-    padding: 10px 20px;
-    background-color: #b27fff;
-    color: #000000;
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente del botón */
+    padding: 12px 24px; /* Aumenta el padding del botón */
+    background-color: #b27fff;/* En esta linea aplicais los cambios del color poner un codigo*/
+    color: #000000; /*Aqui se hace el cambio del color de la letra*/
     border: none;
     border-radius: 99px;
     cursor: pointer;
@@ -35,4 +38,12 @@
     margin-right: 40px; /* Espacio entre el corazón y el borde derecho del contenedor */
     display: flex;
     align-items: center;
+}
+
+.product-description h1 {
+    font-size: 1.5em; /* Aumenta el tamaño del título */
+}
+
+.product-description p {
+    font-size: 1.2em; /* Aumenta el tamaño de la descripción */
 }

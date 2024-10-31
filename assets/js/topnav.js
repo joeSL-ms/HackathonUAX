@@ -1,26 +1,106 @@
-function renderTopNav(logo,icono1,icono2,icono3){
-    const container = document.getElementById("nav");
-    const nav = document.createElement("nav");
-    nav.className="nav";
+const searchSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="8"></circle>
+    <path d="M21 21l-4.35-4.35"></path>
+  </svg>
+`;
 
-    nav.innerHTML = `
-        <div class="logo">
-          <img src="../../assets/img/${logo}" alt="logo" />
-        </div>
-        <div class="search-wrapper">
-          <input class="search-input" type="text" placeholder="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
-            <defs></defs>
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="M21 21l-4.35-4.35"></path>
-          </svg>
-        </div>
-        <div class="nav-elements">
-          <button class="nav-button-icon"><img class="nav-icon" src="../../assets/img/${icono1}" alt=""></button>
-          <button class="nav-button-icon"><img src="../../assets/img/${icono2}" alt="" class="nav-icon"></button>
-          <button class="nav-button-icon"><img src="../../assets/img/${icono3}" alt="" class="nav-icon"></button>
-          <button class="nav-donation">Donar</button>
-        </div>
-    `;
-    container.appendChild(nav);
+function renderTopNav(logo, icon1, icon2, icon3) {
+  const container = document.getElementById("nav");
+  container.innerHTML = ""; // Limpiar el contenido anterior
+  const nav = document.createElement("nav");
+  nav.className = "nav";
+
+  nav.innerHTML = `
+    <div class="logo">
+      <img src="../../assets/img/${logo}" alt="logo" />
+    </div>
+    <div class="search-wrapper">
+      <input class="search-input" type="text" placeholder="Search">
+      ${searchSVG}
+    </div>
+    <div class="nav-elements">
+      <button class="nav-button-icon"><img class="nav-icon" src="../../assets/img/${icon1}" alt=""></button>
+      <button class="nav-button-icon"><img class="nav-icon" src="../../assets/img/${icon2}" alt=""></button>
+      <button class="nav-button-icon"><img class="nav-icon" src="../../assets/img/${icon3}" alt=""></button>
+      <button class="nav-donation">Donar</button>
+    </div>
+  `;
+  
+  container.appendChild(nav);
 }
+
+function renderTopNavTablet(logo, icon1, icon2, icon3) {
+  const container = document.getElementById("nav");
+  container.innerHTML = ""; // Limpiar el contenido anterior
+  const nav = document.createElement("nav");
+  nav.className = "navTablet";
+
+  nav.innerHTML = `
+    <div class="logo">
+      <img src="../../assets/img/${logo}" alt="logo" />
+    </div>
+    <div class="navTablet-content">
+      <div class="nav-elements">
+        <button class="nav-donation">Donar</button>
+      </div>
+      <div class="search-wrapper">
+        <input class="search-input" type="text" placeholder="Search">
+        ${searchSVG}
+      </div>
+      <div class="nav-elements">
+        <button class="nav-button-icon"><img class="nav-icon" src="../../assets/img/${icon1}" alt=""></button>
+        <button class="nav-button-icon"><img class="nav-icon" src="../../assets/img/${icon2}" alt=""></button>
+        <button class="nav-button-icon"><img class="nav-icon" src="../../assets/img/${icon3}" alt=""></button>
+      </div>
+    </div>
+  `;
+  
+  container.appendChild(nav);
+}
+
+function renderTopNavMobile(logo,icon) {
+  const container = document.getElementById("nav");
+  container.innerHTML = ""; // Limpiar el contenido anterior
+  const nav = document.createElement("nav");
+  nav.className = "navMobile";
+
+  nav.innerHTML = `
+    <div class="logo">
+      <img src="../../assets/img/${logo}" alt="logo" />
+    </div>
+    <div class="navMobile-content">
+      <div class="nav-elements">
+        <button class="nav-donation">Donar</button>
+      </div>
+      <div class="search-wrapper">
+        <input class="search-input" type="text" placeholder="Search">
+        ${searchSVG}
+      </div>
+      <div class="nav-elements">
+        <label><img class="nav-icon" src="../../assets/img/${icon}" alt=""></label>
+        <input type="checkbox"/>
+      </div>
+    </div>
+  `;
+  
+  container.appendChild(nav);
+}
+
+function updateNavDisplay() {
+  const width = window.innerWidth;
+  if (width <= 842) {
+    // Para móviles
+    renderTopNavMobile("../img/InFamilyLogo.png","../img/ajusteIcon.png");
+  } else if (width <= 1024) {
+    // Para tabletas
+    renderTopNavTablet("../img/InFamilyLogo.png", "../img/corazonIcon.png", "../img/chatsIcon.png", "usuarioIcon.png");
+  } else {
+    // Para computadoras de escritorio
+    renderTopNav("../img/InFamilyLogo.png", "../img/corazonIcon.png", "../img/chatsIcon.png", "usuarioIcon.png");
+  }
+}
+
+// Inicializa el display correcto y agrega un listener para el cambio de tamaño
+window.addEventListener('resize', updateNavDisplay);
+updateNavDisplay(); // Llama a la función para la primera carga

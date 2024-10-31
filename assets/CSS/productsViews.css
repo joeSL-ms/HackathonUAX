@@ -48,6 +48,16 @@
     height: 2px; /* Grosor de la línea */
     background: grey; /* Color de la línea */
 }
+@media screen and (max-width: 1158px) {
+    #products-container {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 4 columnas de igual ancho */
+        gap: 20px; /* Espacio entre elementos */
+        padding: 10px;
+    }
+}
+
 /*.filter-label {
 
 }*/
