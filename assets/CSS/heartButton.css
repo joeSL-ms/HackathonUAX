@@ -1,0 +1,46 @@
+.product-content {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.toggle-heart-input {
+  position: absolute;
+  left: -100vw;
+}
+
+/* Aplica la animación de "latido" cuando el checkbox está marcado */
+.toggle-heart-input:checked + .heart-label {
+  color: #e2264d;
+  -webkit-filter: none;
+  filter: none;
+  will-change: transform;
+  animation: heart 0.4s ease;
+}
+
+/* Estilos para el icono del corazón */
+.heart-label {
+  color: #888;
+  font-size: 3em;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Definición de la animación "heart" */
+@keyframes heart {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}

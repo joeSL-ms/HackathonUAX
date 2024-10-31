@@ -1,0 +1,38 @@
+.product {
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    justify-content: center;
+    width: 100%;
+}
+.product-presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product-img {
+    min-width: 192px;
+    height: 237px;
+}
+.product-content {
+    display: flex;
+    align-items: center; 
+    width: 100%;
+
+}
+.product-button {
+    font-size: 1em;
+    padding: 10px 20px;
+    background-color: #b27fff;
+    color: #000000;
+    border: none;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.heart-container {
+    margin-left: auto;
+    margin-right: 40px; /* Espacio entre el corazón y el borde derecho del contenedor */
+    display: flex;
+    align-items: center;
+}
