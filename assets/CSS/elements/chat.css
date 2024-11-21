@@ -1,0 +1,226 @@
+#chats_general {
+    position: fixed;
+    /* Fija el contenedor en la pantalla */
+    bottom: 10px;
+    /* Espaciado desde el fondo de la pantalla */
+    right: 10px;
+    display: flex;
+    border: 1px solid #ddd;
+    box-shadow: 0 0px 5px #fea46890;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    max-width: 650px;
+    z-index: 1000;
+    /* Asegura que el chat se muestre por encima de otros elementos */
+}
+
+#chats {
+    width: 250px;
+    /* Ajusta el ancho del aside según sea necesario */
+    border-right: 1px solid #ddd;
+    /* Si deseas separar con una línea */
+    box-shadow: 0 0px 5px #fea46890;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    z-index: 1000;
+    padding: 10px;
+    /* Espaciado interno */
+}
+
+.chat-user {
+    display: flex;
+    padding: 10px;
+    border-radius: 16px;
+    width: 220px;
+    /* Puedes ajustar el ancho según sea necesario */
+}
+
+.chat-user:hover {
+    border: #f27fff solid 1px;
+    background-color: #fff4ed;
+}
+
+.chat-icon-user {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+
+    /* Espaciado entre la imagen y el texto */
+    img {
+        width: 100%;
+    }
+
+    ;
+}
+
+.chat-user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Asegura que el nombre y el mensaje estén centrados verticalmente */
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+    /* Espacio entre el nombre y el mensaje */
+}
+
+.last-message {
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Estilo general para el contenedor principal */
+/*section de la pagina*/
+.chat {
+    width: 100%;
+    min-width: 350px;
+    /* Ajustar según el tamaño deseado */
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex-direction: column;
+    height: 500px;
+    /* Altura fija para contener la conversación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado del chat */
+.chat-header {
+    display: flex;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.chat-header-image {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.chat-header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.chat-header-content {
+    flex-grow: 1;
+}
+
+.chat-object-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.chat-object-description {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Área de conversación */
+.chat-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    /* Permite desplazarse cuando hay muchos mensajes */
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 80%;
+    /* Limita el ancho de los mensajes */
+    word-wrap: break-word;
+}
+
+/* Caja de entrada de mensaje */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+    align-items: center;
+}
+
+.chat-input-field {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.chat-send-button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-send-button:hover {
+    background-color: #0056b3;
+}
+
+/* Visually hidden class for accessibility (to hide label visually) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+
+.message-left, .message-right {
+    padding: 0 10px 10px 10px;
+    width:fit-content;
+    margin-bottom: 5px;
+    border-radius: 16px;
+    word-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+    max-width: 80%;  /* Limitar el ancho máximo del mensaje */
+    
+}
+
+.message-left {
+    text-align: left;
+    background-color: #fea368;
+
+}
+
+.message-right {
+    text-align: right;
+    background-color: #f26fff;
+    align-self: end;
+}
+
+.message-date {
+    font-size: 0.8em;
+    color: rgb(0, 0, 0);
+}

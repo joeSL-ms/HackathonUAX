@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Usuario</title>
+    <link rel="stylesheet" href="../../assets/CSS/adminUser.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="search-container">
+            <input type="text" id="searchUser" placeholder="Buscar usuario...">
+            <button onclick="searchUser()">Buscar</button>
+        </div>
+        <img 
+            src="https://cdn-icons-png.flaticon.com/512/847/847969.png" 
+            alt="Cuenta de usuario" 
+            class="user-icon" 
+            onclick="goToAccount()">
+    </header>
+
+    <main class="content">
+        <div class="user-list">
+            <h2>Usuarios</h2>
+            <div class="user-item">
+                <span>Pepe</span>
+                <div class="user-actions">
+                    <button onclick="deleteUser('Usuario 1')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Eliminar" title="Eliminar">
+                    </button>
+                    <button onclick="blockUser('Usuario 1')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828663.png" alt="Bloquear" title="Bloquear">
+                    </button>
+                    <button onclick="startChat('Usuario 1')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Contactar" title="Contactar">
+                    </button>
+                </div>
+            </div>
+            <div class="user-item">
+                <span>Lola</span>
+                <div class="user-actions">
+                    <button onclick="deleteUser('Usuario 2')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Eliminar" title="Eliminar">
+                    </button>
+                    <button onclick="blockUser('Usuario 2')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828663.png" alt="Bloquear" title="Bloquear">
+                    </button>
+                    <button onclick="startChat('Usuario 2')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Contactar" title="Contactar">
+                    </button>
+                </div>
+            </div>
+            <div class="user-item">
+                <span>Juan</span>
+                <div class="user-actions">
+                    <button onclick="deleteUser('Usuario 3')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Eliminar" title="Eliminar">
+                    </button>
+                    <button onclick="blockUser('Usuario 3')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828663.png" alt="Bloquear" title="Bloquear">
+                    </button>
+                    <button onclick="startChat('Usuario 3')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Contactar" title="Contactar">
+                    </button>
+                </div>
+            </div>
+            <div class="user-item">
+                <span>Ana</span>
+                <div class="user-actions">
+                    <button onclick="deleteUser('Usuario 4')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Eliminar" title="Eliminar">
+                    </button>
+                    <button onclick="blockUser('Usuario 4')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828663.png" alt="Bloquear" title="Bloquear">
+                    </button>
+                    <button onclick="startChat('Usuario 4')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Contactar" title="Contactar">
+                    </button>
+                </div>
+            </div>
+            <div class="user-item">
+                <span>David</span>
+                <div class="user-actions">
+                    <button onclick="deleteUser('Usuario 5')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Eliminar" title="Eliminar">
+                    </button>
+                    <button onclick="blockUser('Usuario 5')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828663.png" alt="Bloquear" title="Bloquear">
+                    </button>
+                    <button onclick="startChat('Usuario 5')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Contactar" title="Contactar">
+                    </button>
+                </div>
+            </div>
+            <div class="user-item">
+                <span>Carlos</span>
+                <div class="user-actions">
+                    <button onclick="deleteUser('Usuario 6')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Eliminar" title="Eliminar">
+                    </button>
+                    <button onclick="blockUser('Usuario 6')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828663.png" alt="Bloquear" title="Bloquear">
+                    </button>
+                    <button onclick="startChat('Usuario 6')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Contactar" title="Contactar">
+                    </button>
+                </div>
+            </div>
+            <div class="user-item">
+                <span>Laura</span>
+                <div class="user-actions">
+                    <button onclick="deleteUser('Usuario 7')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Eliminar" title="Eliminar">
+                    </button>
+                    <button onclick="blockUser('Usuario 7')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828663.png" alt="Bloquear" title="Bloquear">
+                    </button>
+                    <button onclick="startChat('Usuario 7')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Contactar" title="Contactar">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function searchUser() {
+            const query = document.getElementById('searchUser').value;
+            if (query) {
+                alert(`Buscando usuario: ${query}`);
+            } else {
+                alert('Por favor, ingresa un nombre de usuario para buscar.');
+            }
+        }
+
+        function goToAccount() {
+            alert('Ir a la cuenta del usuario.');
+        }
+
+        function deleteUser(username) {
+            alert(`Usuario ${username} eliminado.`);
+        }
+
+        function blockUser(username) {
+            alert(`Usuario ${username} bloqueado.`);
+        }
+
+        function startChat(username) {
+            alert(`Iniciando chat con ${username}.`);
+        }
+    </script>
+</body>
+</html>

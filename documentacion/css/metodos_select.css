@@ -1,0 +1,30 @@
+.donation-form-product select {
+    width: 100%;                 /* Asegura que el select ocupe todo el espacio disponible */
+    height: 45px;                /* Aumenta la altura del select */
+    padding: 10px 15px;          /* Añade espacio dentro del select (a los lados y arriba/abajo) */
+    font-size: 16px;             /* Aumenta el tamaño de la fuente */
+    border: 2px solid #ccc;      /* Establece un borde gris */
+    border-radius: 8px;          /* Da bordes redondeados al select */
+    background-color: #fff;      /* Color de fondo */
+    box-sizing: border-box;      /* Asegura que padding y border no afecten el tamaño total */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Efectos al hacer foco */
+}
+
+.donation-form-product select:focus {
+    border-color: #4A90E2;       /* Color del borde cuando el select está enfocado */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5); /* Sombra azul al hacer foco */
+    outline: none;               /* Elimina el borde por defecto al hacer foco */
+}
+
+/* Estilo de las opciones dentro del select */
+.donation-form-product select option {
+    padding: 10px 15px;          /* Espaciado dentro de cada opción */
+    font-size: 16px;             /* Tamaño de la fuente de las opciones */
+    background-color: #fff;      /* Color de fondo de las opciones */
+    color: #333;                 /* Color de texto */
+    border-bottom: 1px solid #eee; /* Línea separadora entre las opciones */
+}
+
+.donation-form-product select option:hover {
+    background-color: #f0f0f0;   /* Fondo de las opciones al hacer hover */
+}

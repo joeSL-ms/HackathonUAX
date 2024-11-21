@@ -65,7 +65,7 @@
     #products-container {
         flex: 1;
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 4 columnas de igual ancho */
+        grid-template-columns: repeat(3, 1fr); /* 4 columnas de igual ancho */
         gap: 20px; /* Espacio entre elementos */
         padding: 10px;
     }
@@ -76,5 +76,14 @@
         background-color: #fea357; 
         border-radius: 99px; 
         height: 40px; 
+    }
+}
+@media screen and (max-width: 425px) {
+    #products-container {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 4 columnas de igual ancho */
+        gap: 20px; /* Espacio entre elementos */
+        padding: 10px;
     }
 }

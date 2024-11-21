@@ -20,7 +20,7 @@
 /* Estilos para el icono del corazón */
 .heart-label {
   color: #888;
-  font-size: 3em;
+  font-size: 2.4em;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   user-select: none;

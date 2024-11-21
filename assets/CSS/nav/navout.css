@@ -1,0 +1,29 @@
+.topnav-out{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.logo-out-logo img{
+    width: 100%;
+}
+.topnav-out-title {
+    position: relative;
+    flex-grow: 1; 
+    width: auto; 
+    text-align: center;
+}
+.topnav-out::after { content: ''; 
+    width: 100%; /* Ocupa todo el ancho del div */ 
+    height: 3px; /* Grosor de la línea */ 
+    background: rgb(130, 34, 34); /* Color de la línea */ 
+}
+.topnav-out::after {
+    content: '';
+    width: 80%;
+    height: 3px;
+    top: 70px;
+    background: #fea368;
+    position: absolute; /* Posiciona la línea de manera absoluta */
+    left: 50%; /* Empuja el inicio de la línea al 50% del ancho del div */
+    transform: translateX(-50%); /* Mueve la línea hacia la izquierda para centrarla */
+}

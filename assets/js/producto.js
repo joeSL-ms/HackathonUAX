@@ -25,7 +25,7 @@ function renderProducts(products) {
             <div class="product-presentation">
                 <img class="product-img" src="${product.imageUrl}" alt="${product.title}">
                 <div class="product-description">
-                    <h1>${product.title}</h1>
+                    <h2>${product.title}</h2>
                     <p>${product.description}</p>
                 </div>
                 <div class="product-content">

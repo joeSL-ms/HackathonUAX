@@ -1,0 +1,23 @@
+.donation-form-product input {
+    width: 100%;                 /* Ajusta el tamaño del input */
+    height: 45px;                /* Aumenta la altura del input */
+    padding: 0 15px;             /* Añade espacio a los lados del texto dentro del input */
+    font-size: 16px;             /* Tamaño de la fuente */
+    border: 2px solid #ccc;      /* Borde gris claro */
+    border-radius: 8px;          /* Esquinas redondeadas */
+    box-sizing: border-box;      /* Asegura que padding y border no afecten el tamaño del input */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición suave */
+}
+
+.donation-form-product input::placeholder {
+    color: #aaa;                /* Color del placeholder */
+    font-size: 16px;            /* Tamaño de fuente del placeholder */
+    padding-left: 5px;          /* Añade espacio a la izquierda del placeholder */
+    padding-right: 5px;         /* Añade espacio a la derecha del placeholder */
+}
+
+.donation-form-product input:focus {
+    border-color: #4A90E2;       /* Color del borde cuando el input está en foco */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5); /* Sombra azul */
+    outline: none;               /* Elimina el borde predeterminado al hacer foco */
+}

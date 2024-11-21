@@ -2,27 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script src="../../assets/js/chat.js"></script>
+    <link rel="stylesheet" href="../../assets/CSS/elements/chat.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../assets/CSS/global.css" />
-    <link rel="stylesheet" href="../../assets/CSS/producto.css" />
-    <link rel="stylesheet" href="../../assets/CSS/heartButton.css" />
-    <link rel="stylesheet" href="../../assets/CSS/productsViews.css" />
-    <link rel="stylesheet" href="../../assets/CSS/nav.css">
-    <link rel="stylesheet" href="../../assets/CSS/navTablet.css">
-    <link rel="stylesheet" href="../../assets/CSS/navMobile.css">
+    <link rel="stylesheet" href="../../assets/CSS/elements/producto.css" />
+    <link rel="stylesheet" href="../../assets/CSS/elements/heartButton.css" />
+    <link rel="stylesheet" href="../../assets/CSS/elements/productsViews.css" />
+    <link rel="stylesheet" href="../../assets/CSS/nav/nav.css">
+    <link rel="stylesheet" href="../../assets/CSS/nav/navTablet.css">
+    <link rel="stylesheet" href="../../assets/CSS/nav/navMobile.css">
     <title>Document</title>
   </head>
 
   <body>
     <header id="nav"></header>
     <main class="products-views">
+      <!-- Mover el chat aquí arriba -->
+      <div class="chat-body" id="chats_general" style="display: none;">
+        <aside class="chat-colum" id="chats">
+        </aside>
+        <section class="chat" id="chat-messages" style="display: none;">
+        </section>
+      </div>
+
       <aside class="filter-Main">
         <div class="filter-titulo"><h2>Filter</h2></div>
         <div id="filter" class="filter-colum"></div>
       </aside>
       <section id="products-container"></section>
     </main>
-    <script src="../../assets/js/topnav.js"></script> 
+    <script src="../../assets/js/topnav.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
           renderTopNav("InFamilyLogo.png", "corazonIcon.png", "chatsIcon.png", "usuarioIcon.png");
