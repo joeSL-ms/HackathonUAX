@@ -45,8 +45,10 @@
 
 .product-description h2 {
     font-size: 1.3em; /* Aumenta el tamaño del título */
+    height: 50px;
 }
 
 .product-description p {
     font-size: 1em; /* Aumenta el tamaño de la descripción */
+    height: 56px;
 }

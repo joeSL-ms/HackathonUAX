@@ -130,7 +130,7 @@ function setupDonationToggle() {
   const donationToggleBtn = document.getElementById('donation-toggle-btn');
   if (donationToggleBtn) {
     donationToggleBtn.addEventListener('click', function() {
-      const donationUrl = 'donacion.html';
+      const donationUrl = 'donation.html';
       window.open(donationUrl, '_self');
     });
   }
