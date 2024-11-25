@@ -196,7 +196,12 @@
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
 }
-
+.chat-object-btn{
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
 
 .message-left, .message-right {
     padding: 0 10px 10px 10px;
@@ -223,4 +228,14 @@
 .message-date {
     font-size: 0.8em;
     color: rgb(0, 0, 0);
+}
+@media screen and (max-width : 1024px) {
+    .chat-object-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .chat{
+        max-width: 350px;
+    }
 }

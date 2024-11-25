@@ -298,6 +298,9 @@ function rendererChatUsers(chatData, userIdSelf) {
   // Renderizar el contenido dentro de la sección "chat-messages"
   container.innerHTML = `
     <header class="chat-header">
+      <div>
+        <button class="chat-object-btn"> ← </button>
+      </div>
       <div class="chat-header-image">
         <img src="${productDetails.imagen_url}" alt="Imagen del producto">
       </div>
@@ -319,22 +322,59 @@ function rendererChatUsers(chatData, userIdSelf) {
       <button class="chat-send-button">Enviar</button>
     </div>
   `;
+  setupBackUser();
 }
 let chatSelected = null;
 function setupChatUserToggle(userId) {
-  // Seleccionar el contenedor de los mensajes
   const chatContainer = document.getElementById('chat-messages');
+  const chatAside = document.getElementById('chats');
+
+  // Comprobar el tamaño de la pantalla
+  const isSmallScreen = window.innerWidth <= 1024;
+
   if (chatSelected === userId) {
+    // Si el chat ya está seleccionado, ocultarlo
     chatContainer.style.display = 'none';
+    if (isSmallScreen) {
+      // Solo ocultamos el aside si estamos en pantalla pequeña
+      chatAside.style.display = 'block';  // Vuelve a mostrar el aside cuando se cierra el chat
+    }
     chatSelected = null;
 
   } else {
+    // Si el chat es diferente al seleccionado anteriormente, mostrar el nuevo chat
     chatContainer.style.display = 'flex';
+    if (isSmallScreen) {
+      // Si estamos en una pantalla pequeña, ocultamos el aside
+      chatAside.style.display = 'none';
+    }
+    // Actualizar el chat seleccionado
     chatSelected = userId;
   }
   // Alternar la visibilidad del contenedor de chats
 }
-
+function setupBackUser() {
+  const BackUser = document.querySelector('.chat-object-btn');
+  const chatContainer = document.getElementById('chat-messages');
+  const chatAside = document.getElementById('chats');
+  
+  if (BackUser) {
+    BackUser.addEventListener('click', function () {
+      // Comprobar si el contenedor de chat está visible
+      const isChatVisible = chatContainer.style.display === 'flex';
+      chatSelected = null;
+      if (isChatVisible) {
+        // Si el chat está visible, ocultarlo y mostrar el aside
+        chatContainer.style.display = 'none';
+        chatAside.style.display = 'block';
+      } else {
+        // Si el chat no está visible, mostrarlo y ocultar el aside
+        chatContainer.style.display = 'flex';
+        chatAside.style.display = 'none';
+      }
+    });
+  }
+}
 document.addEventListener('DOMContentLoaded', () => {
   renderChat(users, chatsData);  // Renderizamos los chats de los usuarios
 });

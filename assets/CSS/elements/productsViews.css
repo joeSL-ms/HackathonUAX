@@ -1,7 +1,7 @@
 #products-container {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual ancho */
+    grid-template-columns: repeat(6, 1fr); /* 4 columnas de igual ancho */
     gap: 20px; /* Espacio entre elementos */
     padding: 10px;
 }
@@ -22,6 +22,15 @@
     align-items:start;
     padding: 10px;
     width: 128px;
+}
+.filter-subcolum {
+    flex-direction: column;
+    padding: 10px;
+    list-style: none;
+    li input[type="checkbox"] { 
+        visibility: visible;
+        margin-right: 5px;
+    }
 }
 .filter-colum {
     input[type="checkbox"] {

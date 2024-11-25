@@ -16,6 +16,7 @@
 
 .product-img {
     border-radius: 16px;
+    width: 100%;
     min-width: 96px; /* Mantiene las dimensiones predefinidas */
     height: 237px;    /* Mantiene las dimensiones predefinidas */
 }
