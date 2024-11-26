@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="../../assets/CSS/webs/adminMain.css"> <!-- Puedes enlazar tu propio archivo CSS -->
+</head>
+<body>
+    <header>
+        <h1>Panel de Administración</h1>
+        <nav>
+            <ul>
+                <li><a href="#usuarios">Usuarios</a></li>
+                <li><a href="#chats">Chats</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Sección Usuarios -->
+        <section id="usuarios">
+            <h2>Gestión de Usuarios</h2>
+            <p>Aquí puedes gestionar los usuarios del sistema. Añadir, editar o eliminar usuarios.</p>
+            <a href="usuarios.html" class="btn">Ir a Usuarios</a>
+            <div class="acciones-rapidas">
+                <h3>Acciones Rápidas</h3>
+                <button class="btn">Activar Usuario</button>
+                <button class="btn">Editar Usuario</button>
+                <button class="btn">Desactivar Usuario</button>
+            </div>
+        </section>
+
+        <!-- Sección Chats -->
+        <section id="chats">
+            <h2>Gestión de Chats</h2>
+            <p>Aquí puedes ver y gestionar los chats de los usuarios. Ver los chats activos, archivar chats y eliminar chats.</p>
+            <a href="chats.html" class="btn">Ir a Chats</a>
+            <div class="acciones-rapidas">
+                <h3>Acciones Rápidas</h3>
+                <button class="btn">Chats Activos</button>
+                <button class="btn">Archivar Chats</button>
+                <button class="btn">Eliminar Chats</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

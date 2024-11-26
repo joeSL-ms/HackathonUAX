@@ -1,0 +1,19 @@
+.profile-body {
+    display: flex;
+    padding: 20px; 
+    margin-top: 90px;
+    justify-content: flex-start;
+    display: flex;
+    background-color: rgb(80, 124, 189);
+
+}
+
+.profile-colum {
+}
+
+.profile-elements {
+    margin: 10px 0 10px 0;
+    li {
+        margin: 10px 0 10px 0;
+    }
+}
