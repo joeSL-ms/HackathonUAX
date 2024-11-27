@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/CSS/webs/loginEjemplo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedorHeader">
+                <div class="borde-centro"></div>
+                <img class="image" src="../../assets/img/InFamilyLogo.png" alt="fotoIcono">
+                <h1 class="textoHeader">Login</h1>
+            </div>
+        </nav>
+    </header>
+    <main class="login">
+        <section class="contenedor">
+            <div><img class="imagen" src="../../assets/img/InFamilyLogo.png" alt="logo"></div>
+            <div class="content">
+                <form action="hackathon" class="formulario" method="post">
+                    <label class="user" for="userejemplo">Código</label>
+                    <input class="usertext" type="text" id="userejemplo" placeholder="Inserte su código">
+
+                    <!-- Botón para abrir el popup ¿Qué es esto? -->
+                    <button class="accept-btn" type="button" onclick="openPopup('info-box', 'info-overlay')">
+                        ¿Cómo funciona?
+                    </button>
+                    <div class="textup-overlay" id="info-overlay"></div>
+                    <div class="textup-box" id="info-box">
+                        <p class="text">Este apartado te está solicitando un código privado y personal que solo puede ser otorgado por la Comunidad de Madrid.
+                            Para obtener este código debes figurar como familia de acogida para la comunidad, puedes buscar más información
+                            <a href="https://www.comunidad.madrid/servicios/servicios-sociales/acogimiento-familiar-comunidad-madrid">aquí</a>.
+                        </p>
+                        <button class="close-btn" type="button" onclick="closePopup('info-box', 'info-overlay')">Cerrar</button>
+                    </div>
+
+                    <!-- Botón para abrir el popup Protección de Datos -->
+                    <button class="accept-btn" type="button" onclick="openPopup('privacy-box', 'privacy-overlay')">
+                        Terminos y condiciones
+                    </button>
+                    <div class="textup-overlay" id="privacy-overlay"></div>
+                    <div class="textup-box" id="privacy-box">
+                        <p class="text">
+                            Ley de Protección de Datos: Sus datos serán tratados de forma confidencial, siguiendo las normativas vigentes en la Unión Europea. Usted tiene derecho a acceder, rectificar y eliminar sus datos en cualquier momento.
+                            Para más detalles, consulte nuestra <a href="#">política de privacidad</a>.
+                        </p>
+                        <button class="aceptar" type="button" onclick="closePopup('privacy-box', 'privacy-overlay')">Aceptar</button>
+                        <button class="close" type="button" onclick="closePopup('privacy-box', 'privacy-overlay')">Cerrar</button>
+                    </div>
+
+                    <button class="boton" type="button" onclick="location.href='../InFamily/index.html'">ACCEDER</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="../../assets/js/popup.js"></script>
+    <script src="../../assets/js/textup.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+

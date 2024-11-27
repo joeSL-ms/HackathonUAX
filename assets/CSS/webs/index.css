@@ -1,0 +1,163 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+main > div {
+    height: 100vh; /* Cada sección ocupa el 100% de la altura de la ventana */
+}
+
+/* Contenedor principal */
+.container, .container2 {
+    display: flex; /* Flexbox para dividir texto e imagen */
+    height: 100vh; /* Altura completa de la ventana */
+    width: 100%;
+}
+
+/* Contenedor del encabezado */
+.contenedorHeader {
+    position: fixed;  /* Hace que el encabezado esté fijo */
+    width: 100%;      /* Asegura que ocupe todo el ancho */
+    background-color: white;  /* Fondo blanco */
+    padding: 15px 0;  /* Espaciado arriba y abajo */
+    top: 0;           /* Lo mantiene en la parte superior */
+    left: 0;          /* Lo mantiene alineado a la izquierda */
+    z-index: 1000;    /* Asegura que esté encima de otros elementos */
+    display: flex;    /* Para alinear el logo */
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+    align-items: center; /* Centra el logo verticalmente */
+}
+
+/* Logo */
+.logo {
+    margin-left: 2%;  /* Espaciado desde la izquierda */
+    max-width: 150px; /* Limita el tamaño máximo del logo */
+    height: auto;     /* Mantiene la proporción del logo */
+    display: block;   /* Asegura que sea un bloque */
+}
+
+/* Estilo de la imagen del logo */
+.fotoIcono {
+    display: block;
+}
+
+/* Sección de texto */
+.text-section, .text-section2 {
+    width: 50%; /* Ocupa la mitad izquierda */
+    padding: 5% 10%;
+    background: linear-gradient(to bottom, #a16eff, #ff8e8e); /* Fondo degradado */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Títulos */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+}
+
+/* Línea de separación */
+.borde-centro {
+    width: 100%;
+    height: 2px; /* Grosor de la línea */
+    background: black;
+    border: none;
+    margin: 20px 0; /* Espaciado */
+}
+
+/* Estilo del texto */
+.text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Botón de acción */
+.button {
+    display: inline-block;
+    background-color: #ffa500;
+    color: #000;
+    padding: 5%;
+    font-size: 1.2rem;
+    border-radius: 35px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    text-align: center;
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.button:hover {
+    background-color: #ff8700;
+}
+
+/* Sección de imagen */
+.image-section, .image-section2 {
+    width: 50%; /* Ocupa la mitad derecha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-timing-function: cubic-bezier(0.96, 0.01, 0.32, 1.09);
+    animation-duration: 1s;
+}
+
+/* Estilo de las imágenes */
+.image-section img, .image-section2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el espacio */
+}
+/* Contenedor del carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden; /* Oculta las imágenes que están fuera del marco */
+    width: 100%; /* El carrusel ocupa el 50% del ancho del contenedor */
+    height: 100%; /* Altura completa del contenedor */
+    display: flex; /* Asegura que las imágenes se alineen correctamente */
+}
+
+/* Contenedor de imágenes */
+.carousel-images {
+    display: flex; /* Alinea las imágenes horizontalmente */
+    transition: transform 1s ease; /* Transición suave entre imágenes */
+    height: 100%; /* El contenedor de imágenes ocupa toda la altura */
+}
+
+/* Estilo de las imágenes */
+.carousel-images img {
+    width: 100%; /* Las imágenes ocupan todo el ancho del carrusel */
+    height: 100%; /* Las imágenes ocupan toda la altura del carrusel */
+    object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsión */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container, .container2 {
+        flex-direction: column;
+    }
+
+    .text-section,
+    .image-section,
+    .text-section2,
+    .image-section2 {
+        width: 100%;
+        position: relative;
+        clip-path: none; /* Simplificar el diseño en pantallas pequeñas */
+    }
+}

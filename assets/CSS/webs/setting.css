@@ -1,0 +1,55 @@
+.admin-panel {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+    
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.actions button {
+    padding: 10px 20px;
+    background-color: #fea368;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+.actions button:hover {
+    background-color: #e58c50;
+}
+.music-player {
+    margin-top: 20px;
+    display: none;
+}

@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*------------HEADER/STYLE------------------*/
+.contenedorHeader {
+    position: relative;
+    height: 100px;
+}
+
+.contenedorHeader::before,
+.contenedorHeader::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: rgba(170, 163, 163, 0.319);
+}
+
+.contenedorHeader::before {
+    left: 70px;
+    width: 25%; /* Ancho del borde izquierdo */
+}
+
+.contenedorHeader::after {
+    right: 70px;
+    width: 25%; /* Ancho del borde derecho */
+}
+
+.contenedorHeader .borde-centro {
+    position: absolute;
+    bottom: 0;
+    left: 27%; /* Empieza donde termina el borde izquierdo */
+    width: 50%; /* Ancho del borde central */
+    height: 4px;
+    background-color: rgb(180, 11, 11);
+}
+
+/*------------HEADER/BORDER------------------/
+
+/------------------LOGO---------------------*/
+.image{
+    margin-top: 2%;
+}
+/*------------------LOGO---------------------/
+
+/------------------HEADER-------------------*/
+.textoHeader{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 35px;
+    margin-left: 48%;
+    display: flex;
+    margin-top: -40px;
+}
+/*------------------HEADER-------------------*/
+section{
+    
+    width: 100%;
+}
+.logo{
+    flex: 1;
+
+}
+.login{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+/* Asegura que el main ocupe toda la pantalla y alinea el contenido al centro */
+main.login {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3; /* Color de fondo opcional */
+}
+
+/* Da estilo a la sección para centrarla y establecer un tamaño fijo */
+main .login section {
+
+    padding: 20px;
+    background-color: #ffffff; /* Fondo de la sección */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Alinea el contenido */
+}
+
+/* Coloca la imagen como encabezado */
+main .login section .logo {
+    margin-bottom: 20px;
+}
+
+main .login section .logo img {
+    width: 100%; /* Ajusta la imagen para que ocupe el ancho completo */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Padding para las etiquetas label */
+main .login section .login_formulario label {
+    display: block; /* Coloca el label en bloque para un padding más fácil */
+    padding-bottom: 10px;
+    font-weight: bold; /* Opcional, para darle un poco más de estilo */
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.content{
+    width: 100%;
+    padding: 10px;
+}
+.formulario{
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.user{
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+.usertext{
+    margin-top: 5%;
+    padding: 3%;
+    border-radius: 5px;
+    font-style: italic;
+}
+.popup{
+    margin-top: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.popup-box {
+    display: none; /* Ocultamos el popup inicialmente */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.popup-box {
+    display: none; /* Ocultamos el popup inicialmente */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+}
+.text{
+    margin-bottom: 1%;
+}
+.close-btn {
+    margin-top: 10px;
+    margin-left: 85%;
+    padding: 3%;
+    background-color: #ff8e8e;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #6a11cb;
+}
+.accept-btn {
+    display: inline-block;
+    margin-top: 10%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(45deg, #6a11cb, #ff8e8e);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accept-btn:hover {
+    background: linear-gradient(45deg, #ff8e8e, #6a11cb);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.textup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+}
+
+.textup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 20;
+}
+
+.textup-box .text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+.button-container {
+    display: flex;
+    justify-content: space-evenly; /* Espaciado uniforme entre botones */
+    align-items: center; /* Asegura que los botones estén verticalmente alineados */
+    margin-top: 20px; /* Espaciado superior */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.aceptar, .close {
+    margin-top: 5%;
+    padding: 3%;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.aceptar {
+    background: #ff8e8e;
+}
+
+.aceptar:hover {
+    background: #6a11cb;
+}
+
+.close {
+    margin-left: 60%;
+    background: #ff8e8e;
+}
+
+.close:hover {
+    background: #6a11cb;
+}
+
+
+/*
+.pass{
+    margin-top: 5%;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+.passtext{
+    padding: 3%;
+    border-radius: 5px;
+    font-style: italic;
+}
+*/
+.boton{
+    display: block; /* Asegura que ocupe toda el área definida */
+    text-align: center; /* Centra el texto dentro del botón */
+    padding: 5%; /* Espaciado interno proporcional */
+    margin: 10% 30%; /* Margen superior e inferior de 10%, lateral de 30% */
+    border-radius: 35px; /* Bordes redondeados */
+    border: white solid 5px; /* Borde blanco de 5px */
+    font-family: 'Poppins', sans-serif; /* Tipografía */
+    font-size: medium; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+.enlace{
+    text-decoration: none;
+    list-style: none;
+    color: none;
+}
+.boton:hover {
+    background-color: white; /* Fondo blanco al pasar el mouse */
+    color: #1b334f; /* Texto en azul oscuro al pasar el mouse */
+}
+.contenedor {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(270deg, #ff8e8e,#b27fff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    border-radius: 25px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

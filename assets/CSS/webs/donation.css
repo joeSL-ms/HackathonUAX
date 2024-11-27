@@ -8,6 +8,12 @@
 section {
     width: 268.800px;
 }
+.topnav-out-title {
+    position: relative;
+    flex-grow: 1;
+    text-align: center;
+    margin-left: -140px;
+}
 .donation-upload-img{
     display: flex;
     flex-direction: column;

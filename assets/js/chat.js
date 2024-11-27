@@ -1,43 +1,43 @@
 const users = [
   {
     user: "juan",
-    message: "Que haces por aqui a estas horas?",
+    message: "Entiendo. Lo consideraré, gracias.",
     imgURL: "../../assets/img/perfil.png",
     id: 1  // ID agregado
   },
   {
     user: "maria",
-    message: "¿Nos vemos más tarde?",
+    message: "Sí, pero tienes que por lo menos ser de la comunidad.",
     imgURL: "../../assets/img/perfil.png",
     id: 2  // ID agregado
   },
   {
     user: "pedro",
-    message: "¡Feliz cumpleaños!",
+    message: "Claro, puedes tenerlo a través de nuestra página web.",
     imgURL: "../../assets/img/perfil.png",
     id: 3  // ID agregado
   },
   {
     user: "ana",
-    message: "¿Has terminado el proyecto?",
+    message: "Sí, puedo hacer envíos con algunas compañias conocidas como gls.",
     imgURL: "../../assets/img/perfil.png",
     id: 4  // ID agregado
   },
   {
     user: "luis",
-    message: "Vamos a la playa este fin de semana.",
+    message: "...",
     imgURL: "../../assets/img/perfil.png",
     id: 5  // ID agregado
   },
   {
     user: "carmen",
-    message: "¿Puedes ayudarme con esto?",
+    message: "...",
     imgURL: "../../assets/img/perfil.png",
     id: 6  // ID agregado
   },
   {
     user: "javier",
-    message: "No olvides la reunión de mañana.",
+    message: "...",
     imgURL: "../../assets/img/perfil.png",
     id: 7  // ID agregado
   }
@@ -48,10 +48,10 @@ const chatsData = [
   {
     producto: {
       chat_id: 1,
-      producto_nombre: 'Smartphone Samsung Galaxy S22',
-      producto_descripcion: 'Smartphone con pantalla AMOLED y cámara de 50 MP.',
-      imagen_url: '../../assets/img/ropa b.webp',
-      publicacion_titulo: 'Venta de Smartphone S22',
+      producto_nombre: 'Pantalón Jeans',
+      producto_descripcion: 'Pantalón de mezclilla resistente para uso diario.',
+      imagen_url: '../../assets/img/jeans.webp',
+      publicacion_titulo: 'Pantalón Jeans, en muy buen estado',
       publicacion_valoracion: 5
     },
     mensajes: [
@@ -73,7 +73,7 @@ const chatsData = [
       },
       {
         mensaje_id: 3,
-        mensaje_contenido: '¿Podrías bajar un poco el precio?',
+        mensaje_contenido: '¿Podrías darme un poco de informacion sobre las tallas?',
         mensaje_fecha: '2024-11-20 08:30',
         usuario_nombre: 'Usuario 1',
         usuario_id: 1,  // Ahora ID del usuario 2
@@ -81,7 +81,7 @@ const chatsData = [
       },
       {
         mensaje_id: 4,
-        mensaje_contenido: 'Lo siento, no puedo bajar el precio, está a buen valor.cndeklcnecnecn ecnekcndm',
+        mensaje_contenido: 'Lo siento, no puedo, está con la etiqueta borrosa.',
         mensaje_fecha: '2024-11-20 08:45',
         usuario_nombre: 'Usuario 2',
         usuario_id: 5,  // ID del usuario 5 (usuario conectado)
@@ -100,9 +100,9 @@ const chatsData = [
   {
     producto: {
       chat_id: 2,
-      producto_nombre: 'Laptop Dell XPS 13',
-      producto_descripcion: 'Laptop ultradelgada con pantalla 4K y procesador Intel i7.',
-      imagen_url: '../../assets/img/laptop.webp',
+      producto_nombre: 'laptop-hp.webp',
+      producto_descripcion: 'Portátil de alto rendimiento para trabajo y estudio.',
+      imagen_url: '../../assets/img/laptop-hp.webp',
       publicacion_titulo: 'Venta de Laptop Dell XPS 13',
       publicacion_valoracion: 4
     },
@@ -125,7 +125,7 @@ const chatsData = [
       },
       {
         mensaje_id: 8,
-        mensaje_contenido: '¿Aceptas pago con tarjeta de crédito?',
+        mensaje_contenido: '¿Aceptas envios fuera de la comunidad?',
         mensaje_fecha: '2024-11-20 10:30',
         usuario_nombre: 'Usuario 2',
         usuario_id: 2,  // ID del usuario 5 (usuario conectado)
@@ -133,7 +133,7 @@ const chatsData = [
       },
       {
         mensaje_id: 9,
-        mensaje_contenido: 'Sí, acepto pagos con tarjeta.',
+        mensaje_contenido: 'Sí, pero tienes que por lo menos ser de la comunidad.',
         mensaje_fecha: '2024-11-20 10:45',
         usuario_nombre: 'Usuario 3',
         usuario_id: 5,  // ID del usuario 3
@@ -144,16 +144,16 @@ const chatsData = [
   {
     producto: {
       chat_id: 3,
-      producto_nombre: 'Monitor LG 27" UltraWide',
-      producto_descripcion: 'Monitor 4K con pantalla curva de 27 pulgadas.',
-      imagen_url: '../../assets/img/monitor.webp',
-      publicacion_titulo: 'Venta de Monitor LG UltraWide',
+      producto_nombre: 'Enciclopedia Infantil',
+      producto_descripcion: 'Libro educativo con temas para niños.',
+      imagen_url: '../../assets/img/enciclopedia-infantil.webp',
+      publicacion_titulo: 'Regalo libro de enciclopaeida infantil.',
       publicacion_valoracion: 4
     },
     mensajes: [
       {
         mensaje_id: 10,
-        mensaje_contenido: '¿Está disponible el monitor?',
+        mensaje_contenido: '¿Está disponible la Enciclopedia Infantil?',
         mensaje_fecha: '2024-11-20 11:00',
         usuario_nombre: 'Usuario 3',
         usuario_id: 3,  // ID del usuario 3
@@ -169,7 +169,7 @@ const chatsData = [
       },
       {
         mensaje_id: 12,
-        mensaje_contenido: '¿Puedo comprarlo a través de la tienda online?',
+        mensaje_contenido: '¿Puedo adquirirlo a través de la paltaforma?',
         mensaje_fecha: '2024-11-20 11:30',
         usuario_nombre: 'Usuario 3',
         usuario_id: 3,  // ID del usuario 4
@@ -177,7 +177,7 @@ const chatsData = [
       },
       {
         mensaje_id: 13,
-        mensaje_contenido: 'Claro, puedes comprarlo a través de nuestra página web.',
+        mensaje_contenido: 'Claro, puedes tenerlo a través de nuestra página web.',
         mensaje_fecha: '2024-11-20 11:45',
         usuario_nombre: 'Usuario 2',
         usuario_id: 5,  // ID del usuario 5 (usuario conectado)
@@ -188,16 +188,16 @@ const chatsData = [
   {
     producto: {
       chat_id: 4,
-      producto_nombre: 'Smartwatch Fitbit Versa 3',
-      producto_descripcion: 'Reloj inteligente con monitorización de salud y deporte.',
-      imagen_url: '../../assets/img/smartwatch.webp',
-      publicacion_titulo: 'Venta de Smartwatch Fitbit Versa 3',
+      producto_nombre: 'Libro de Química Experimental',
+      producto_descripcion: 'Experimentos básicos para entender la química.',
+      imagen_url: '../../assets/img/libro-quimica-experimental.webp',
+      publicacion_titulo: 'Libro de quimica en buen estado para estudiar.',
       publicacion_valoracion: 5
     },
     mensajes: [
       {
         mensaje_id: 14,
-        mensaje_contenido: '¿El reloj tiene seguimiento de actividad física?',
+        mensaje_contenido: '¿El Libro de Química tiene solucionario?',
         mensaje_fecha: '2024-11-20 12:00',
         usuario_nombre: 'Usuario 4',
         usuario_id: 4,  // ID del usuario 4
@@ -205,7 +205,7 @@ const chatsData = [
       },
       {
         mensaje_id: 15,
-        mensaje_contenido: 'Sí, tiene seguimiento de actividad y calorías.',
+        mensaje_contenido: 'Sí, tiene solucionario.',
         mensaje_fecha: '2024-11-20 12:15',
         usuario_nombre: 'Usuario 2',
         usuario_id: 5,  // ID del usuario 5 (usuario conectado)
@@ -213,7 +213,7 @@ const chatsData = [
       },
       {
         mensaje_id: 16,
-        mensaje_contenido: '¿Aceptas envíos internacionales?',
+        mensaje_contenido: '¿Aceptas envíos con transporte como gls?',
         mensaje_fecha: '2024-11-20 12:30',
         usuario_nombre: 'Usuario 4',
         usuario_id: 4,  // ID del usuario 4
@@ -221,7 +221,7 @@ const chatsData = [
       },
       {
         mensaje_id: 17,
-        mensaje_contenido: 'Sí, puedo hacer envíos internacionales.',
+        mensaje_contenido: 'Sí, puedo hacer envíos con algunas compañias conocidas como gls.',
         mensaje_fecha: '2024-11-20 12:45',
         usuario_nombre: 'Usuario 2',
         usuario_id: 5,  // ID del usuario 5 (usuario conectado)
